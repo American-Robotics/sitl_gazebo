@@ -304,10 +304,10 @@ set(plugins
   )
 
 # ROS mavlink version not compatible with geotagged images plugin
-if (NOT roscpp_FOUND)
-  add_library(gazebo_geotagged_images_plugin SHARED src/gazebo_geotagged_images_plugin.cpp)
-  list(APPEND plugins gazebo_geotagged_images_plugin)
-endif()
+#if (NOT roscpp_FOUND)
+#  add_library(gazebo_geotagged_images_plugin SHARED src/gazebo_geotagged_images_plugin.cpp)
+#  list(APPEND plugins gazebo_geotagged_images_plugin)
+#endif()
 
 #If BUILD_ROS_INTERFACE set to ON, build gazebo_hil_interface and gazebo_motor_failure_plugin
 if (BUILD_ROS_INTERFACE)

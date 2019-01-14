@@ -758,8 +758,8 @@ void GazeboMavlinkInterface::IRLockCallback(IRLockPtr& irlock_message) {
   sensor_msg.angle_y = irlock_message->pos_y();
   sensor_msg.size_x = irlock_message->size_x();
   sensor_msg.size_y = irlock_message->size_y();
-  sensor_msg.position_valid = false;
-  sensor_msg.type = LANDING_TARGET_TYPE_LIGHT_BEACON;
+//  sensor_msg.position_valid = false;
+//  sensor_msg.type = LANDING_TARGET_TYPE_LIGHT_BEACON;
 
   mavlink_message_t msg;
   mavlink_msg_landing_target_encode_chan(1, 200, MAVLINK_COMM_0, &msg, &sensor_msg);

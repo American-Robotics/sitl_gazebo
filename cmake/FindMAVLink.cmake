@@ -23,6 +23,7 @@ set(_MAVLINK_EXTRA_SEARCH_PATHS
     /usr/
     /usr/local/
     /opt/ros/${ROS_DISTRO}/
+    /mavros_build/install/
     )
 
 # find the include directory
