@@ -17,6 +17,7 @@ execute_process(COMMAND ${ROSVERSION} -d
 
 set(_MAVLINK_EXTRA_SEARCH_PATHS
     ${CMAKE_SOURCE_DIR}/mavlink/
+    ${CMAKE_SOURCE_DIR}/../../mavros_ws/install/
     ../../mavlink/
     ../mavlink/
     ${CATKIN_DEVEL_PREFIX}/
