@@ -654,7 +654,7 @@ void GazeboMavlinkInterface::GpsCallback(GpsPtr& gps_msg){
   ignition::math::Angle cog(atan2(gps_msg->velocity_east(), gps_msg->velocity_north()));
   cog.Normalize();
   hil_gps_msg.cog = static_cast<uint16_t>(GetDegrees360(cog) * 100.0);
-  hil_gps_msg.satellites_visible = 10;
+  hil_gps_msg.satellites_visible = 20;
 
   // send HIL_GPS Mavlink msg
   mavlink_message_t msg;
