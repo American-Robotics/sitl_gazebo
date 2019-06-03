@@ -310,7 +310,7 @@ void GazeboMavlinkInterface::OnUpdate(const common::UpdateInfo& /*_info*/) {
       hil_gps_msg.ve = -velocity_current_W.y * 100;
       hil_gps_msg.vd = -velocity_current_W.z * 100;
       hil_gps_msg.cog = atan2(hil_gps_msg.ve, hil_gps_msg.vn) * 180.0/3.1416 * 100.0;
-      hil_gps_msg.satellites_visible = 10;
+      hil_gps_msg.satellites_visible = 20;
 
       send_mavlink_message(MAVLINK_MSG_ID_HIL_GPS, &hil_gps_msg, 200);
     } else{
@@ -327,7 +327,7 @@ void GazeboMavlinkInterface::OnUpdate(const common::UpdateInfo& /*_info*/) {
       hil_gps_msg_.set_ve(-velocity_current_W.y * 100);
       hil_gps_msg_.set_vd(-velocity_current_W.z * 100);
       hil_gps_msg_.set_cog(atan2(-velocity_current_W.y * 100, velocity_current_W.x * 100) * 180.0/3.1416 * 100.0);
-      hil_gps_msg_.set_satellites_visible(10);
+      hil_gps_msg_.set_satellites_visible(20);
              
       hil_gps_pub_->Publish(hil_gps_msg_);
     }
